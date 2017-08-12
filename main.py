@@ -102,3 +102,6 @@ def index():
         er=str(page) + str(e)
         data=db.ecouriez.find({'_id':{'$gte':last_id}}).sort('_id',pymongo.ASCENDING).limit(limit)
         return render_template("index.html",data=data,size=s,error=er,next_url=next_url,prev_url=prev_url)
+
+if __name__=='__main__':
+    app.run()
