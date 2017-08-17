@@ -16,8 +16,8 @@ s=db.ecouriez.count()
 result=db.ecouriez.find()
 req_query={}
 page=""
-
 service_query=""
+
 
 def pagination():
     offset=int(request.args['offset'])
@@ -40,7 +40,9 @@ def pagination():
 
 @app.route('/', methods=["GET","POST"])
 def index():
+    
     next_url,prev_url,last_id,limit,offset,page=pagination()
+   
     query={'_id':{'$gte':last_id}}
      
     try:
@@ -87,10 +89,10 @@ def index():
             result=db.ecouriez.find(req_query).sort('_id',pymongo.ASCENDING).limit(limit)
             global s
             s=result.count()
-                
             err=str(page)
             return render_template("index.html",data=result,message=req_query,size=s,error=err,next_url=next_url,prev_url=prev_url)
 
+   
         query.update(req_query)
         err=str(page)
         
