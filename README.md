@@ -1,2 +1,3 @@
 # ecouriez_assignment
 A sample Web Application created with Python (py web frameworks like flask) &amp; MongoDB as the Backend.   The json dataset has been used to import into the MongoDB  downloaded from  https://gist.github.com/ajay-cz/eed8543e7459397834714f3ee8b20b9f#file-data-json   The Web application has a single page To demonstrate the searching and filtering capability of a large data set with the help of Python and MongoDB. The user should be able to Filter on any of these attributes provided in the DB schema. Certain attributes have repeated values (eg., Tags ). filtering of these attributes have been also taken care of as well.
+# Heroku link : https://lit-inlet-77578.herokuapp.com/?limit=25&offset=0
